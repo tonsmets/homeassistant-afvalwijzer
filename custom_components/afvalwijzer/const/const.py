@@ -59,7 +59,7 @@ CONF_DATE_FORMAT = "date_format"
 CONF_INCLUDE_DATE_TODAY = "include_date_today"
 CONF_DEFAULT_LABEL = "default_label"
 
-SENSOR_PREFIX = "afvalwijzer "
+SENSOR_PREFIX = "afvalwijzer"
 SENSOR_ICON = "mdi:recycle"
 
 ATTR_LAST_UPDATE = "last_update"

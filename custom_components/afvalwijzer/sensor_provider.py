@@ -22,14 +22,14 @@ from .const.const import (
 
 class AfvalwijzerProviderSensor(Entity):
     def __init__(
-        self, hass, fetch_afvalwijzer_data, waste_type, date_format, default_label
+        self, hass, fetch_afvalwijzer_data, waste_type, date_format, default_label, postal_code, street_number
     ):
         self.hass = hass
         self.fetch_afvalwijzer_data = fetch_afvalwijzer_data
         self.default_label = default_label
         self.date_format = date_format
         self.waste_type = waste_type
-        self._name = SENSOR_PREFIX + waste_type
+        self._name = " ".join([SENSOR_PREFIX, postal_code, street_number, waste_type])
         self._icon = SENSOR_ICON
         self._hidden = False
         self._state = None

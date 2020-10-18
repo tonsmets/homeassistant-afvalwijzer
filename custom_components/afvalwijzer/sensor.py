@@ -102,14 +102,14 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         _LOGGER.debug("Adding sensor provider: %s", waste_type)
         entities.append(
             AfvalwijzerProviderSensor(
-                hass, fetch_afvalwijzer_data, waste_type, date_format, default_label
+                hass, fetch_afvalwijzer_data, waste_type, date_format, default_label, postal_code, street_number
             )
         )
     for waste_type in waste_types_custom:
         _LOGGER.debug("Adding sensor custom: %s", waste_type)
         entities.append(
             AfvalwijzerCustomSensor(
-                hass, fetch_afvalwijzer_data, waste_type, default_label
+                hass, fetch_afvalwijzer_data, waste_type, default_label, postal_code, street_number
             )
         )
     _LOGGER.debug("Entities appended = %s", entities)
